@@ -7,7 +7,16 @@ const RestaurantDetails = ()=>{
        <AppHeader />
        <RestaurantBanner />
        <AppFooter />
+       <div className="flex flex-wrap ">
        <FoodItemCard />
+       <FoodItemCard />
+       <FoodItemCard />
+       <FoodItemCard />
+       <FoodItemCard />
+       <FoodItemCard />
+       <FoodItemCard />
+       <FoodItemCard />
+       </div>
     </div>
 }
 
