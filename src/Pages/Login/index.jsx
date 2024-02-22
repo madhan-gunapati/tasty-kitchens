@@ -65,11 +65,11 @@ const Login = ()=>{
             <h5 className="text-center m-3">Login</h5>
             <div className="flex flex-col m-1">
                 <label className="text-sm" htmlFor="username-input ">USERNAME</label>
-                <input className="bg-[#E2E8F0] rounded p-1" value={inputDetails.username} onChange={handleNameChange} type="text" />
+                <input className="bg-[#E2E8F0] rounded p-1" value={inputDetails.username} placeholder="Madhan" onChange={handleNameChange} type="text" />
              </div>
             <div  className="flex flex-col m-1 ">
                 <label  className="text-sm" htmlFor="password-input">PASSWORD</label>
-                <input className="bg-[#E2E8F0] rounded p-1" value={inputDetails.password} onChange={handlePasswordChange} type="password" />
+                <input className="bg-[#E2E8F0] rounded p-1" value={inputDetails.password} placeholder="Madhan@123" onChange={handlePasswordChange} type="password" />
             </div>
             <p className={`text-red-500 ${inputDetails.showError? '': 'hidden'}`} > *{inputDetails.errorMsg}</p>
             <button className="bg-Orange rounded pl-5 pr-5 w-full mt-2 text-white p-1" onClick={handleSubmit}  type="button">Login</button>
