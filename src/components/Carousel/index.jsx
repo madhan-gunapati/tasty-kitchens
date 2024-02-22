@@ -25,7 +25,7 @@ const Carosel = ()=>{
           setUrls(data.offers)
           }
           else{
-            console.log('error : ' , data.error_message)
+            console.log('error : ' , data.error_msg)
           }
         }
         catch(e){

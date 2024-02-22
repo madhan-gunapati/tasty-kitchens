@@ -1,4 +1,4 @@
-import { useState  } from "react"
+import { useEffect, useState  } from "react"
 import Cookies from "js-cookie"
 import { useNavigate } from "react-router-dom"
 const Login = ()=>{
@@ -52,6 +52,12 @@ const Login = ()=>{
         }
 
     }
+    useEffect(()=>{
+        const token = Cookies.get('token');
+        if(token !== undefined){
+            navigate('/')
+        }
+    } ,[])
 
     return <div className="flex justify-center h-screen ">
         <form onSubmit={(e)=>{e.preventDefault()}} className="bg-white rounded shadow-xl w-3/12  p-5 self-center">

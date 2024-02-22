@@ -1,11 +1,13 @@
-const CartRow = ()=>{
+const CartRow = (props)=>{
+    const {data} = props
+    const {name , quantity , price , image_url} = data
     return <tr >
     <td className="flex justify-center flex-grow-0 items-center">
-    <img className="h-20 w-28 m-1 rounded" src='https://picsum.photos/200/300' alt='Restaurant logo' /> 
-    <p>Prawn Special</p>
+    <img className="h-28 w-1/3 m-1 rounded" src={image_url} alt='Restaurant logo' /> 
+    <p className="w-1/3">{name}</p>
     </td>
-    <td>2</td>
-    <td className="text-Orange font-semibold">₹ 5500.00</td>
+    <td>{quantity}</td>
+    <td className="text-Orange font-semibold">₹ {price * quantity}</td>
 </tr>
 }
 

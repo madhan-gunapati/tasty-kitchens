@@ -1,8 +1,9 @@
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const RestaurantCard = (props)=>{
     const {data} = props
-    const {image_url , name , cuisine , user_rating:{rating , total_reviews , rating_color} } = data
-    return <li className="flex items-center justify-around list-none w-1/4 m-3 ">
+    const {image_url, id , name , cuisine , user_rating:{rating , total_reviews , rating_color} } = data
+    return <li className=" list-none w-1/4 m-3 "><Link to={`restaurant-details/${id}`} className="flex items-center justify-around">
         <img className="h-20 w-1/3 m-1  rounded " src={image_url} alt='Restaurant logo' />
         <div className="w-2/3 text-wrap">
             <h5 className="font-bold text-sm">{name}</h5>
@@ -13,7 +14,7 @@ const RestaurantCard = (props)=>{
             </div>
            
         </div>
-    </li>
+    </Link></li>
 }
 
 export default RestaurantCard

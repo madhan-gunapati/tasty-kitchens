@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
 const RestaurantBanner = ()=>{
+    
     return <div id='restaurant-banner'  className="flex items-center text-xs bg-black p-1 pl-5  text-white"> 
     <img className="m-1 ml-5 w-56 h-24 rounded" src='https://picsum.photos/200/300' alt='restaurant banner' />
     <div className="m-1 ml-2">

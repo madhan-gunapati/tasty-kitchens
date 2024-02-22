@@ -15,6 +15,7 @@ const PopularRestaurants = ()=>{
         const fetchDetails = async()=>{
             const url = `https://apis.ccbp.in/restaurants-list?offset=0&limit=9&sort_by_rating=${sortValue}`
             const token  = Cookies.get('token')
+          
             const options = {
                 method:'GET',
                 headers:{
