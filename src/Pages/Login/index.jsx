@@ -25,6 +25,7 @@ const Login = ()=>{
         }
 
         try{
+            
             const url = 'https://apis.ccbp.in/login'
             const options = {
                 method: 'POST',
@@ -59,8 +60,8 @@ const Login = ()=>{
         }
     } ,[])
 
-    return <div className="flex justify-center h-screen ">
-        <form onSubmit={(e)=>{e.preventDefault()}} className="bg-white rounded shadow-xl w-3/12  p-5 self-center">
+    return <div className="flex justify-center h-screen  ">
+        <form onSubmit={(e)=>{e.preventDefault()}} className="bg-white rounded shadow-xl md:w-3/12 w-3/4  p-5 self-center">
             <h5 className="text-center m-3">Login</h5>
             <div className="flex flex-col m-1">
                 <label className="text-sm" htmlFor="username-input ">USERNAME</label>

@@ -33,8 +33,8 @@ const CartTable = (props)=>{
     <td className="text-center p-4">
    Order Total:
     </td>
-    <td></td>
-    <td className="text-Orange font-semibold flex flex-col items-center p-5">₹ {orderTotal()} <button type='button' onClick={handlePayment} className="text-white bg-Orange p-2 m-2 rounded">Place Order</button></td>
+    
+    <td className=" font-semibold flex flex-col items-center p-5">₹ {orderTotal()}.00 <button type='button' onClick={handlePayment} className="text-white bg-Orange p-2 m-2 rounded">Place Order</button></td>
 </tr>
        </tbody>
    </table>

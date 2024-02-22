@@ -32,14 +32,14 @@ const removeItem = ()=>{
   dispatch(remove(details))
 }
 
-    return <li className="flex items-center  list-none  w-2/5 p-2 text-xs">
-    <img className="h-24 w-32 m-1 rounded" src={image_url} alt='Restaurant logo' />
-    <div className="m-2">
+    return <li className="flex items-center  list-none w-11/12  md:w-2/5 p-2 text-xs">
+    <img className="h-24 w-1/3 m-1 rounded" src={image_url} alt='Restaurant logo' />
+    <div className="m-2 w-2/3">
         <h3 className="font-medium text-xl">{name}</h3>
-        <p className="text-gray-500">₹ {cost}</p>
+        <p className="text-gray-500 text-sm">₹ {cost}.00</p>
         <div className="flex align-center">
         <FaStar color="gold" size={15} />
-      <span className="font-bold ml-1">{rating}</span> 
+      <span className="font-bold text-sm ml-1">{rating}</span> 
         </div>
         {addButtonStatus.show ?  <button className="text-Orange border-2 border-Orange rounded px-3 " type="button" onClick={addItem}>ADD </button> 
       : <div> 

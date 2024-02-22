@@ -41,16 +41,16 @@ const PopularRestaurants = ()=>{
         }
         fetchDetails()
     } ,[sortValue])
-    return <div>
-        <div className="flex justify-around m-2"> 
-             <div>
-                     <h4 className="font-bold">Popular Restaurants</h4>
-                    <p className="text-gray-500">Select Your favourite restaurant special dish and make your day happy...</p>
+    return <div className="mb-28">
+        <div className="md:flex justify-around m-5 "> 
+             <div className="m-2">
+                     <h4 className="font-bold text-xl">Popular Restaurants</h4>
+                    <p className="text-gray-500 text-xs">Select Your favourite restaurant special dish and make your day happy...</p>
              </div>
              <div className="flex items-center text-gray-500">
                     <MdOutlineSort className="m-1"  size={25}/>
                      <p className="m-1">Sort by</p>
-                     <select className="m-1" value={sortValue} onChange={handleSort} >
+                     <select className="m-2" value={sortValue} onChange={handleSort} >
                         <option value='Lowest'>Lowest</option>
                         <option value='Highest'>Highest</option>
                      </select>
@@ -58,7 +58,7 @@ const PopularRestaurants = ()=>{
        </div>
        <hr />
        {restaurantList.loading?<div className=" p-2 flex flex-col justify-center items-center"> <TailSpin color="Orange"  />  </div>:
-             <ul className="flex justify-center flex-wrap">
+             <ul className="flex justify-center mb-28 md:mb-0 flex-wrap">
                 {restaurantList.restaurants.map((item)=><RestaurantCard key={item.id} data={item} />)}
                 
                 </ul>}

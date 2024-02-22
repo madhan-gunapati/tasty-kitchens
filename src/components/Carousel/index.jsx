@@ -44,23 +44,23 @@ const Carosel = ()=>{
     slidesToScroll: 1,
   };
   return (
-    <Slider className="w-2/4 m-auto" {...settings}>
+    <Slider className=" w-10/12 md:w-2/4 m-auto" {...settings}>
       
      
        
-          {Urls===''?<h3 className="text-center">Offer </h3>:<img className="h-40 m-auto" src={Urls[0].image_url} alt='offer 1' />}
+          {Urls===''?<h3 className="text-center">Offer </h3>:<img className="h-40  " src={Urls[0].image_url} alt='offer 1' />}
         
    
      
-          {Urls===''?<h3>Offer </h3>:<img className="h-40 m-auto" src={Urls[1].image_url} alt='offer 1' />}
+          {Urls===''?<h3>Offer </h3>:<img className="h-40 m-auto" src={Urls[1].image_url} alt='offer 2' />}
       
     
      
-          {Urls===''?<h3>Offer </h3>:<img className="h-40 m-auto" src={Urls[2].image_url} alt='offer 1' />}
+          {Urls===''?<h3>Offer </h3>:<img className="h-40 m-auto" src={Urls[2].image_url} alt='offer 3' />}
          
    
      
-          {Urls===''?<h3>Offer </h3>:<img className="h-40 m-auto" src={Urls[3].image_url} alt='offer 1' />}
+          {Urls===''?<h3>Offer </h3>:<img className="h-40 m-auto" src={Urls[3].image_url} alt='offer 4' />}
         
     
      

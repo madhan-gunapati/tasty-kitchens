@@ -46,7 +46,7 @@ const RestaurantDetails = ()=>{
       
        {data === '' ?<div className="flex justify-center p-3"> <TailSpin color='orange' /> </div> :
       <div className="mb-20"> 
-        <div id='restaurant-banner'  className="flex items-center text-xs bg-black p-4 pl-5   text-white"> 
+        <div id='restaurant-banner'  className="flex items-center text-[0.5rem] md:text-xs  bg-[url('https://res.cloudinary.com/dujknj4ka/image/upload/v1708615158/BgImg_jv1txh.png')]  p-4 pl-5   text-white"> 
                 <img className="m-1 ml-5 w-56 h-24 rounded" src={data.image_url} alt='restaurant banner' />
                  <div className="m-2 ml-2">
                      <h3 className="font-bold text-xl">{data.name}</h3>
@@ -60,7 +60,7 @@ const RestaurantDetails = ()=>{
             <hr className="w-8 rotate-90" />
         <div>
             <p>₹ {data.cost_for_two}</p>
-            <p>Cost for two</p>
+            <p className=" md:text-xs">Cost for two</p>
         </div>
     </div>
     </div>

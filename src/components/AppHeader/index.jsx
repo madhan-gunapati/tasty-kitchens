@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
 import React, { useState } from 'react';
-
+import Logo from '../../assets/AppLogo.png'
 import { Link, useNavigate } from 'react-router-dom';
 const AppHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,13 +15,13 @@ const AppHeader = () => {
   }
 
   return (
-    <nav className=" text-sm bg-white border-gray-200 dark:bg-gray-900">
+    <nav className=" text-sm  border-gray-200 bg-gray-50">
      
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-        <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Tasty Kitchens</span>
-        </a>
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src={Logo} className="h-8" alt=" Logo" />
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-Orange font-sans italic">Tasty Kitchens</span>
+        </Link>
         <button
           onClick={handleToggle}
           type="button"
@@ -35,19 +35,19 @@ const AppHeader = () => {
           </svg>
         </button>
         <div className={`w-full md:block md:w-auto ${isMenuOpen ? '' : 'hidden'}`} id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-50   dark:border-gray-700">
             <li>
-            <Link to='/' className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Home</Link>
+            <Link to='/' className='block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Home</Link>
             </li>
 
             <li>
               
-              <Link to='/cart' className='block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Cart</Link>
+              <Link to='/cart' className='block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'>Cart</Link>
             </li>
            
            
             <li>
-             <button type='button' onClick={LogoutSession} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</button>
+             <button type='button' onClick={LogoutSession} className=" block py-2 px-3 text-gray-900 rounded hover:bg-gray-900 md:hover:bg-Orange md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Logout</button>
             </li>
           </ul>
         </div>
